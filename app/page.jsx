@@ -4,7 +4,9 @@ import Image from 'next/image';
 import "./main.css"
 import pccoer from "@/images/pccoer.png";
 import pcet from "@/images/pcet.png";
-import MainChar from "@/images/main-char.png"
+import CircleAni from "@/components/circle/circle.jsx";
+import Slide2 from "@/components/slide_2/imageSlider.jsx";
+
 
 
 const ParticleComponent = () => {
@@ -105,33 +107,48 @@ const ParticleComponent = () => {
   }, []);
 
   return (
-    <div id="particles-js" style={{ width: '100%', height: '100vh', position: 'relative' }}>
-      <div className='main-container '>
-        <div className='clg-info-container'>
-          <div className='clg-info'>
-            <Image src={pccoer} className="clglogo" />
-            <div className="Name text-white">
-              <p>Pimpri Chinchwad College Of Engineering & Research</p>
-              <p className='text-center'>Presents</p>
+    <>
+      <div id="particles-js" style={{ width: '100%', height: '100vh', position: 'relative' }}>
+        <div className='main-container '>
+          <div className='clg-info-container'>
+            <div className='clg-info'>
+              <Image src={pccoer} className="clglogo" />
+              <div className="Name text-white">
+                <p>Pimpri Chinchwad College Of Engineering & Research</p>
+                <p className='text-center'>Presents</p>
+              </div>
+              <Image src={pcet} className='clglogo' />
             </div>
-            <Image src={pcet} className='clglogo' />
+
           </div>
 
-        </div>
+
+
+          {/* <Image className='main-char inline' src={MainChar} /> */}
+
+          <div className="heading-container flex justify-center top-[100px]" >
+            <h1 className="heading text-white ">RoboHawk</h1>
+          </div>
+
+          <div className='circle w-full'>
+            
+              <CircleAni  />
+            
+
+          </div>
 
 
 
 
-
-        <div className="heading-container flex justify-center top-[100px]" >
-          <h1 className="heading text-white "><span>Robo</span><Image className='main-char inline' src={MainChar} /><span>Hawk</span></h1>
         </div>
 
 
 
       </div>
-
-    </div>
+      <div className='w-full h-[100vh] absolute'>
+        <Slide2 />
+      </div>
+    </>
   );
 };
 

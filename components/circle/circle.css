@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container span {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 4px;
+    background: #2c4766;
+    border-radius: 5px;
+    transform-origin: 75px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+    animation: animateBlink 1s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animateBlink {
+    0% {
+        background: #00fffc;
+    }
+    25% {
+        background: #2c4766;
+    }
+}
+
+.main-char {
+    width: 15vw;
+    margin-right: 6.4vw;
+}
+
+.imgcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
