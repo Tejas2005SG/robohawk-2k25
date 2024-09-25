@@ -2,10 +2,13 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import "./main.css"
+import Navbar from "@/components/Navbar/navbar.jsx";
+// import Navbar2 from "@/components/Navbar/navbar2.jsx";
 import pccoer from "@/images/pccoer.png";
 import pcet from "@/images/pcet.png";
 import CircleAni from "@/components/circle/circle.jsx";
 import Slide2 from "@/components/slide_2/imageSlider.jsx";
+import Hawk from "@/images/Hawk.png";
 
 
 
@@ -110,6 +113,14 @@ const ParticleComponent = () => {
     <>
       <div id="particles-js" style={{ width: '100%', height: '100vh', position: 'relative' }}>
         <div className='main-container '>
+          <div className='navbar'>
+            <div className='absolute inner-div-navbar'>
+            <Navbar/>
+
+            </div>
+        
+          </div>
+        
           <div className='clg-info-container'>
             <div className='clg-info'>
               <Image src={pccoer} className="clglogo" />
@@ -129,12 +140,10 @@ const ParticleComponent = () => {
           <div className="heading-container flex justify-center top-[100px]" >
             <h1 className="heading text-white ">RoboHawk</h1>
           </div>
-
-          <div className='circle w-full'>
-            
+          
+<Image className='absolute hawk-img' src={Hawk}/>
+          <div className='circle '>
               <CircleAni  />
-            
-
           </div>
 
 
