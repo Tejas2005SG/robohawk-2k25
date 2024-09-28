@@ -141,7 +141,7 @@ const ParticleComponent = () => {
             <h1 className="heading text-white ">RoboHawk</h1>
           </div>
           
-<Image className='absolute hawk-img' src={Hawk}/>
+{/* <Image className='absolute hawk-img' src={Hawk}/> */}
           <div className='circle '>
               <CircleAni  />
           </div>
