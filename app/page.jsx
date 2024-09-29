@@ -9,6 +9,7 @@ import pcet from "@/images/pcet.png";
 import CircleAni from "@/components/circle/circle.jsx";
 import Slide2 from "@/components/slide_2/imageSlider.jsx";
 import Hawk from "@/images/Hawk.png";
+import Team from "@/components/team/team.jsx";
 
 
 
@@ -138,7 +139,7 @@ const ParticleComponent = () => {
           {/* <Image className='main-char inline' src={MainChar} /> */}
 
           <div className="heading-container flex justify-center top-[100px]" >
-            <h1 className="heading text-white ">RoboHawk</h1>
+            <h1 className="main-heading text-white ">RoboHawk</h1>
           </div>
           
 {/* <Image className='absolute hawk-img' src={Hawk}/> */}
@@ -154,10 +155,15 @@ const ParticleComponent = () => {
 
 
       </div>
-      <div className='w-full h-[100vh] absolute'>
-        <Slide2 />
+     
+      <div  className='card-slide absolute w-full h-full'>
+        <Team/>
       </div>
+
+      
     </>
+
+    
   );
 };
 
