@@ -7,9 +7,9 @@ import Navbar from "@/components/Navbar/navbar.jsx";
 import pccoer from "@/images/pccoer.png";
 import pcet from "@/images/pcet.png";
 import CircleAni from "@/components/circle/circle.jsx";
-import Slide2 from "@/components/slide_2/imageSlider.jsx";
-import Hawk from "@/images/Hawk.png";
-import Team from "@/components/team/team.jsx";
+import WelcomeCircle from "@/components/animations/welcome-circle/welcomecir.jsx";
+import StartBtn from "@/components/buttons/btnstart/btn.jsx";
+
 
 
 
@@ -111,18 +111,19 @@ const ParticleComponent = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <div id="particles-js" style={{ width: '100%', height: '100vh', position: 'relative' }}>
-        <div className='main-container '>
-          <div className='navbar'>
-            <div className='absolute inner-div-navbar'>
-            <Navbar/>
-
+        <div className='main-container'>
+          <div className='absolute'>
+            <div className='absolute '>
+              <Navbar />
             </div>
-        
+
           </div>
-        
+
           <div className='clg-info-container'>
+           
+
             <div className='clg-info'>
               <Image src={pccoer} className="clglogo" />
               <div className="Name text-white">
@@ -133,18 +134,26 @@ const ParticleComponent = () => {
             </div>
 
           </div>
+          <div className='welcome-circle absolute'>
+          <WelcomeCircle/>
 
+          </div>
+          
 
 
           {/* <Image className='main-char inline' src={MainChar} /> */}
 
-          <div className="heading-container flex justify-center top-[100px]" >
+          <div className="heading-container " >
             <h1 className="main-heading text-white ">RoboHawk</h1>
           </div>
-          
-{/* <Image className='absolute hawk-img' src={Hawk}/> */}
-          <div className='circle '>
-              <CircleAni  />
+
+          {/* <Image className='absolute hawk-img' src={Hawk}/> */}
+          <div className='circle absolute'>
+            <CircleAni />
+          </div>
+
+          <div className='start-btn absolute' >
+            <StartBtn/>
           </div>
 
 
@@ -155,15 +164,15 @@ const ParticleComponent = () => {
 
 
       </div>
+
      
-      <div  className='card-slide absolute w-full h-full'>
-        <Team/>
-      </div>
 
-      
-    </>
 
-    
+
+
+    </div>
+
+
   );
 };
 

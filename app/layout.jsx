@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import './globals.css';
 
+
+
 const metadata = {
   title: "Robohawk",
   description: "Robohawk",
@@ -34,6 +36,7 @@ const Layout = ({ children }) => {
   return (
     <html>
       <body className='main'>
+     
         {/* This div will be scrollable with Lenis smooth scroll */}
       {children}
     </body>
